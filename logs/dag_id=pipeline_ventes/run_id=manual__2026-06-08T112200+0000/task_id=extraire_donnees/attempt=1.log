@@ -1,0 +1,23 @@
+[2026-06-08T11:22:01.842+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-08T11:22:01.884+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_ventes.extraire_donnees manual__2026-06-08T11:22:00+00:00 [queued]>
+[2026-06-08T11:22:01.893+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_ventes.extraire_donnees manual__2026-06-08T11:22:00+00:00 [queued]>
+[2026-06-08T11:22:01.894+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-06-08T11:22:01.909+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extraire_donnees> on 2026-06-08 11:22:00+00:00
+[2026-06-08T11:22:01.922+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'pipeline_ventes', 'extraire_donnees', 'manual__2026-06-08T11:22:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_ventes.py', '--cfg-path', '/tmp/tmpcvxe8vmb']
+[2026-06-08T11:22:01.925+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask extraire_donnees
+[2026-06-08T11:22:01.926+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=182) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-08T11:22:01.928+0000] {standard_task_runner.py:63} INFO - Started process 183 to run task
+[2026-06-08T11:22:01.994+0000] {task_command.py:426} INFO - Running <TaskInstance: pipeline_ventes.extraire_donnees manual__2026-06-08T11:22:00+00:00 [running]> on host e3b807ada13a
+[2026-06-08T11:22:02.109+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pipeline_ventes' AIRFLOW_CTX_TASK_ID='extraire_donnees' AIRFLOW_CTX_EXECUTION_DATE='2026-06-08T11:22:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-08T11:22:00+00:00'
+[2026-06-08T11:22:02.111+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-08T11:22:02.141+0000] {logging_mixin.py:188} INFO - Donnees extraites : 4 lignes
+[2026-06-08T11:22:02.142+0000] {logging_mixin.py:188} INFO -   - Chaise x12 @ 45.0 euros
+[2026-06-08T11:22:02.144+0000] {logging_mixin.py:188} INFO -   - Table x3 @ 120.0 euros
+[2026-06-08T11:22:02.144+0000] {logging_mixin.py:188} INFO -   - Lampe x8 @ 25.0 euros
+[2026-06-08T11:22:02.145+0000] {logging_mixin.py:188} INFO -   - Chaise x5 @ 45.0 euros
+[2026-06-08T11:22:02.145+0000] {python.py:237} INFO - Done. Returned value was: [{'produit': 'Chaise', 'quantite': 12, 'prix_unitaire': 45.0}, {'produit': 'Table', 'quantite': 3, 'prix_unitaire': 120.0}, {'produit': 'Lampe', 'quantite': 8, 'prix_unitaire': 25.0}, {'produit': 'Chaise', 'quantite': 5, 'prix_unitaire': 45.0}]
+[2026-06-08T11:22:02.146+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-08T11:22:02.178+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=pipeline_ventes, task_id=extraire_donnees, run_id=manual__2026-06-08T11:22:00+00:00, execution_date=20260608T112200, start_date=20260608T112201, end_date=20260608T112202
+[2026-06-08T11:22:02.224+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-08T11:22:02.262+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-08T11:22:02.265+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
